@@ -31,7 +31,7 @@ export const SeriesGroupInspector: React.FC<SeriesGroupInspectorProps> = ({
               activeGroup.measurement.available ? 'status-led--phosphor' : 'status-led--offline'
             }`}
           />
-          <h2 className="bv-panel-title">Series Group Inspection // S1 – S8</h2>
+          <h2 className="bv-panel-title">Series Group Inspection // S1 - S8</h2>
         </div>
 
         <span className={`bv-badge ${isDemo ? 'bv-badge--amber' : 'bv-badge--muted'}`}>
@@ -102,7 +102,7 @@ export const SeriesGroupInspector: React.FC<SeriesGroupInspectorProps> = ({
                 >
                   {group.measurement.available && group.measurement.voltageV !== null
                     ? `${group.measurement.voltageV.toFixed(2)}V`
-                    : '— —'}
+                    : '--'}
                 </span>
               </button>
             );

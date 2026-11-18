@@ -49,8 +49,11 @@ export function getBackendHttpBase(): string {
   const envBase = (import.meta as unknown as { env?: Record<string, string | undefined> }).env
     ?.VITE_API_BASE_URL;
   if (envBase) return envBase.replace(/\/$/, '');
-  if (typeof window !== 'undefined' && window.location.port === '8000') {
-    return window.location.origin;
+  if (typeof window !== 'undefined') {
+    // When served directly by the backend or in production (not Vite dev ports 5173 / 3000 / 4173)
+    if (window.location.port !== '5173' && window.location.port !== '3000' && window.location.port !== '4173') {
+      return window.location.origin;
+    }
   }
   return 'http://127.0.0.1:8000';
 }
@@ -97,10 +100,10 @@ export async function fetchBackendHistory(limit = 60): Promise<BackendTelemetryP
 }
 
 const PROBE_ZONES = [
-  { id: 'TEMP-01', probeId: 'T1', title: 'Zone A · Negative Bus Side', sub: 'Illustrative placement near S1–S2 banks' },
-  { id: 'TEMP-02', probeId: 'T2', title: 'Zone B · Inner Core Left', sub: 'Illustrative placement near S3–S4 banks' },
-  { id: 'TEMP-03', probeId: 'T3', title: 'Zone C · Inner Core Right', sub: 'Illustrative placement near S5–S6 banks' },
-  { id: 'TEMP-04', probeId: 'T4', title: 'Zone D · Positive Bus Side', sub: 'Illustrative placement near S7–S8 banks' },
+  { id: 'TEMP-01', probeId: 'T1', title: 'Zone A · Negative Bus Side', sub: 'Illustrative placement near S1-S2 banks' },
+  { id: 'TEMP-02', probeId: 'T2', title: 'Zone B · Inner Core Left', sub: 'Illustrative placement near S3-S4 banks' },
+  { id: 'TEMP-03', probeId: 'T3', title: 'Zone C · Inner Core Right', sub: 'Illustrative placement near S5-S6 banks' },
+  { id: 'TEMP-04', probeId: 'T4', title: 'Zone D · Positive Bus Side', sub: 'Illustrative placement near S7-S8 banks' },
 ] as const;
 
 /**

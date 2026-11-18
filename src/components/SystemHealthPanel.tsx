@@ -116,7 +116,7 @@ export const SystemHealthPanel: React.FC<SystemHealthPanelProps> = ({
                     overflow: 'hidden',
                     textOverflow: 'ellipsis',
                   }}
-                  title={`${sub.hardwareSpec} — ${sub.detail}`}
+                  title={`${sub.hardwareSpec} - ${sub.detail}`}
                 >
                   {sub.hardwareSpec}
                 </div>

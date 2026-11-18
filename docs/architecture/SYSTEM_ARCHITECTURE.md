@@ -12,7 +12,7 @@ Python FastAPI Edge Backend (backend/app/)
   ├─ Coulomb-Counting SoC Service (app/telemetry/soc_service.py)
   ├─ Configurable Diagnostic Rule Engine (app/diagnostics/rule_engine.py)
   ├─ Local SQLite Database (data/telemetry/battvision.db · WAL mode)
-  ├─ Offline Edge ML Inference Runtime (app/ml/inference_engine.py — MODEL_NOT_DEPLOYED)
+  ├─ Offline Edge ML Inference Runtime (app/ml/inference_engine.py - MODEL_NOT_DEPLOYED)
   └─ Local REST API + WebSocket Hub (/api/v1/* & /ws/telemetry)
   ↓
 React + TypeScript Industrial Workstation Dashboard (src/ -> dist/)

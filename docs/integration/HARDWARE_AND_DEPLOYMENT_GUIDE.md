@@ -2,19 +2,19 @@
 
 ## 1. Local Development & Full Pipeline Test (No Physical Battery Required)
 
-### Terminal 1 — Start Python Edge Backend
+### Terminal 1 - Start Python Edge Backend
 ```bash
 cd backend
 .venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
-### Terminal 2 — Stream Simulated ESP32-S3 Packets into Backend
+### Terminal 2 - Stream Simulated ESP32-S3 Packets into Backend
 ```bash
 backend/.venv/bin/python backend/tools/simulated_esp32_sender.py --interval 1.0
 ```
 To test missing probe handling (`TEMP-03 = null`), add `--drop-temp3`.
 
-### Terminal 3 — Start React Dashboard (or open `http://localhost:8000` after `npm run build`)
+### Terminal 3 - Start React Dashboard (or open `http://localhost:8000` after `npm run build`)
 ```bash
 npm run dev
 ```

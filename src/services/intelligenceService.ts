@@ -189,7 +189,7 @@ function buildInputFeatures(
       currentValueLabel: isDemo
         ? `${telemetry.temperature.toFixed(1)} °C mean (${telemetry.minTemperature.toFixed(
             1
-          )}–${telemetry.maxTemperature.toFixed(1)} °C)`
+          )}-${telemetry.maxTemperature.toFixed(1)} °C)`
         : 'N/A',
       sourceDetail: '4× DS18B20 zone probes',
       availableInCurrentMode: isDemo,
@@ -275,7 +275,7 @@ function buildDiagnosticFindings(
       title: 'Inter-Probe Thermal Gradient Observed',
       supportingMeasurement: `ΔT = ${tempSpreadC.toFixed(1)} °C (${telemetry.minTemperature.toFixed(
         1
-      )}–${telemetry.maxTemperature.toFixed(1)} °C across TEMP-01..04)`,
+      )}-${telemetry.maxTemperature.toFixed(1)} °C across TEMP-01..04)`,
       timestamp: ts,
       severity: tempSpreadC > 3.5 ? 'WARNING' : 'INFO',
       dataSource: 'DEMO',
@@ -286,7 +286,7 @@ function buildDiagnosticFindings(
     {
       id: 'find-cell-spread',
       title: '8S Series-Group Voltage Spread Monitor',
-      supportingMeasurement: `ΔV = ${telemetry.cellDeltaMv} mV across simulated S1–S8 nodes`,
+      supportingMeasurement: `ΔV = ${telemetry.cellDeltaMv} mV across simulated S1-S8 nodes`,
       timestamp: ts,
       severity: telemetry.cellDeltaMv >= 45 ? 'ATTENTION' : 'INFO',
       dataSource: 'DEMO',
@@ -427,7 +427,7 @@ export function buildBatteryHealthEstimate(
           ? demoTraj.remainingCycles + demoTraj.uncertaintyHalfWidth
           : null,
         explanation: isDemo
-          ? 'Illustrative uncalibrated demo envelope (±14%) — calibrated uncertainty intervals require validated ageing data.'
+          ? 'Illustrative uncalibrated demo envelope (±14%) - calibrated uncertainty intervals require validated ageing data.'
           : 'Calibrated prediction uncertainty unavailable (no deployed model).',
       },
       modelStatusLabel: 'INSUFFICIENT AGEING DATA FOR VALIDATED RUL',
@@ -439,7 +439,7 @@ export function buildBatteryHealthEstimate(
         ? 'ILLUSTRATIVE DEMO STATE ONLY'
         : 'ASSESSMENT UNAVAILABLE (OFFLINE)',
       assessmentBasis: isDemo
-        ? 'Based on simulated telemetry & unvalidated demo curves — not a certified health score.'
+        ? 'Based on simulated telemetry & unvalidated demo curves - not a certified health score.'
         : 'Awaiting live ESP32-S3, JK BMS, and validated capacity-test data.',
       dataQuality: isDemo
         ? `SIMULATED STREAM (${history.length} RING FRAMES)`

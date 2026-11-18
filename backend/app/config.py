@@ -67,7 +67,7 @@ class Settings:
     api_version: str = "1.0.0"
     schema_version: str = "1.0"
     host: str = os.getenv("BV_HOST", "0.0.0.0")
-    port: int = int(os.getenv("BV_PORT", "8000"))
+    port: int = int(os.getenv("PORT", os.getenv("BV_PORT", "8000")))
     database_path: Path = Path(
         os.getenv("BV_DATABASE_PATH", str(DATA_DIR / "telemetry" / "battvision.db"))
     )

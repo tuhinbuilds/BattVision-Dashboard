@@ -25,7 +25,7 @@ const GRAVITY_MS2 = 9.80665;
 
 /**
  * Realistic LiFePO4 single-cell OCV curve (32700 chemistry).
- * Captures the flat 3.22V–3.33V plateau between 15% and 90% SoC,
+ * Captures the flat 3.22V-3.33V plateau between 15% and 90% SoC,
  * steep knee above 94%, and drop-off below 12%.
  */
 function lifepo4CellOcv(socPercent: number): number {
@@ -52,33 +52,33 @@ const PROBE_META = [
   {
     id: 'TEMP-01',
     probeId: 'T1',
-    location: 'Bank S1–S2 Terminal',
+    location: 'Bank S1-S2 Terminal',
     zoneTitle: 'Zone A · Negative Bus Side',
-    zoneSubtitle: 'Illustrative placement near S1–S2 banks',
+    zoneSubtitle: 'Illustrative placement near S1-S2 banks',
     biasC: -0.6,
   },
   {
     id: 'TEMP-02',
     probeId: 'T2',
-    location: 'Bank S3–S4 Core',
+    location: 'Bank S3-S4 Core',
     zoneTitle: 'Zone B · Inner Core Left',
-    zoneSubtitle: 'Illustrative placement near S3–S4 banks',
+    zoneSubtitle: 'Illustrative placement near S3-S4 banks',
     biasC: 0.9,
   },
   {
     id: 'TEMP-03',
     probeId: 'T3',
-    location: 'Bank S5–S6 Core',
+    location: 'Bank S5-S6 Core',
     zoneTitle: 'Zone C · Inner Core Right',
-    zoneSubtitle: 'Illustrative placement near S5–S6 banks',
+    zoneSubtitle: 'Illustrative placement near S5-S6 banks',
     biasC: 1.1,
   },
   {
     id: 'TEMP-04',
     probeId: 'T4',
-    location: 'Bank S7–S8 Busbar',
+    location: 'Bank S7-S8 Busbar',
     zoneTitle: 'Zone D · Positive Bus Side',
-    zoneSubtitle: 'Illustrative placement near S7–S8 banks',
+    zoneSubtitle: 'Illustrative placement near S7-S8 banks',
     biasC: -0.4,
   },
 ] as const;
@@ -633,7 +633,7 @@ export function evaluateDiagnostics(telemetry: BatteryTelemetry): DiagnosticRule
       id: 'otp-thermal',
       code: 'DIAG-T01',
       parameter: 'Core Thermal Envelope',
-      thresholdLabel: '0.0 °C – 55.0 °C',
+      thresholdLabel: '0.0 °C - 55.0 °C',
       currentValueLabel: `${telemetry.maxTemperature.toFixed(1)} °C max`,
       state:
         telemetry.maxTemperature >= 52
@@ -648,7 +648,7 @@ export function evaluateDiagnostics(telemetry: BatteryTelemetry): DiagnosticRule
       code: 'DIAG-C01',
       parameter: '8S Cell Group Voltage Spread (ΔV)',
       thresholdLabel: '< 45 mV nominal',
-      currentValueLabel: `${telemetry.cellDeltaMv} mV (${minCell.toFixed(3)}–${maxCell.toFixed(3)} V)`,
+      currentValueLabel: `${telemetry.cellDeltaMv} mV (${minCell.toFixed(3)}-${maxCell.toFixed(3)} V)`,
       state:
         telemetry.cellDeltaMv >= 90
           ? 'FAULT'

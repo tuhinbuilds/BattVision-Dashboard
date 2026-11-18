@@ -157,7 +157,7 @@ export interface CellGroupReading {
 
 export interface TempProbeReading {
   probeId: string; // e.g. "T1"
-  location: string; // e.g. "Bank S1–S2 Core"
+  location: string; // e.g. "Bank S1-S2 Core"
   sensor: string; // "DS18B20"
   temperature: number; // °C
 }

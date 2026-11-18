@@ -521,7 +521,7 @@ export const MainIntelligenceInstruments: React.FC<MainIntelligenceInstrumentsPr
               <span style={{ color: 'var(--text-muted)' }}>DEMO RANGE (UNCALIB.)</span>
               <span style={{ color: 'var(--text-secondary)' }}>
                 {rul.uncertainty.lowerCycles !== null && rul.uncertainty.upperCycles !== null
-                  ? `${rul.uncertainty.lowerCycles} – ${rul.uncertainty.upperCycles} cyc`
+                  ? `${rul.uncertainty.lowerCycles} - ${rul.uncertainty.upperCycles} cyc`
                   : 'UNAVAILABLE'}
               </span>
             </div>

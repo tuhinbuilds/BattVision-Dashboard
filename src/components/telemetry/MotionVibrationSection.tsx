@@ -297,9 +297,9 @@ export const MotionVibrationSection: React.FC<MotionVibrationSectionProps> = Rea
                   3-AXIS ACCELERATION WAVEFORM (g)
                 </span>
                 <span className="mono" style={{ fontSize: '9px', display: 'inline-flex', gap: '8px' }}>
-                  <span style={{ color: '#B8D65A' }}>— X</span>
-                  <span style={{ color: '#E69A42' }}>— Y</span>
-                  <span style={{ color: '#D6D2C5' }}>— Z</span>
+                  <span style={{ color: '#B8D65A' }}> - X</span>
+                  <span style={{ color: '#E69A42' }}> - Y</span>
+                  <span style={{ color: '#D6D2C5' }}> - Z</span>
                 </span>
               </div>
 

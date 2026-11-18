@@ -93,7 +93,7 @@ export const ExperimentRegistryPanel: React.FC<ExperimentRegistryPanelProps> = (
       status: 'ACTIVE',
       notes: [
         dataSourceMode === 'DEMO'
-          ? 'Created in DEMO mode (local volatile session — not a verified physical lab run).'
+          ? 'Created in DEMO mode (local volatile session - not a verified physical lab run).'
           : 'Created in HARDWARE mode (awaiting backend storage persistence).',
       ],
       simulated: dataSourceMode === 'DEMO',
@@ -352,7 +352,7 @@ export const ExperimentRegistryPanel: React.FC<ExperimentRegistryPanelProps> = (
         <div style={{ overflowX: 'auto' }}>
           {filtered.length === 0 ? (
             <div className="mono" style={{ padding: '32px', textAlign: 'center', fontSize: '11px', color: 'var(--text-muted)' }}>
-              NO EXPERIMENT SESSIONS RECORDED — CREATE A NEW SESSION OR SWITCH TO DEMO MODE
+              NO EXPERIMENT SESSIONS RECORDED - CREATE A NEW SESSION OR SWITCH TO DEMO MODE
             </div>
           ) : (
             <table className="bv-table">

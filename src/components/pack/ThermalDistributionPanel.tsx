@@ -309,10 +309,10 @@ export const ThermalDistributionPanel: React.FC<ThermalDistributionPanelProps> =
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
             <span style={{ color: '#8FB593' }}>■ COOL &lt;{THERMAL_DISPLAY_BANDS.coolMaxC}°C</span>
             <span style={{ color: '#B8D65A' }}>
-              ■ NORMAL {THERMAL_DISPLAY_BANDS.coolMaxC}–{THERMAL_DISPLAY_BANDS.normalMaxC}°C
+              ■ NORMAL {THERMAL_DISPLAY_BANDS.coolMaxC}-{THERMAL_DISPLAY_BANDS.normalMaxC}°C
             </span>
             <span style={{ color: '#E69A42' }}>
-              ■ WARM {THERMAL_DISPLAY_BANDS.normalMaxC}–{THERMAL_DISPLAY_BANDS.warmMaxC}°C
+              ■ WARM {THERMAL_DISPLAY_BANDS.normalMaxC}-{THERMAL_DISPLAY_BANDS.warmMaxC}°C
             </span>
             <span style={{ color: '#D75C4B' }}>■ CRITICAL &gt;{THERMAL_DISPLAY_BANDS.warmMaxC}°C</span>
           </div>

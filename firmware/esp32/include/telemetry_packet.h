@@ -4,7 +4,7 @@
 
 /**
  * Version 1.0 Telemetry Packet Structure matching backend/app/schemas/telemetry.py.
- * Missing or invalid readings MUST be serialized as JSON null — NEVER 0.
+ * Missing or invalid readings MUST be serialized as JSON null - NEVER 0.
  */
 struct OptionalFloat {
   bool valid = false;

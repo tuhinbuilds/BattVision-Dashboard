@@ -140,7 +140,7 @@ function seedSystemLogs(): SystemLogEntry[] {
       timeLabel: formatTimeShort(now - 2400),
       category: 'BMS',
       severity: 'WARNING',
-      message: 'JK SMART BMS B1A8S10P INTERFACE NOT CONFIGURED — VERIFICATION PENDING',
+      message: 'JK SMART BMS B1A8S10P INTERFACE NOT CONFIGURED - VERIFICATION PENDING',
       simulated: true,
     },
     {
@@ -149,7 +149,7 @@ function seedSystemLogs(): SystemLogEntry[] {
       timeLabel: formatTimeShort(now - 1600),
       category: 'ML',
       severity: 'INFO',
-      message: 'EDGE INFERENCE ENGINE OFFLINE — NO DEPLOYED MODEL ARTIFACT',
+      message: 'EDGE INFERENCE ENGINE OFFLINE - NO DEPLOYED MODEL ARTIFACT',
       simulated: true,
     },
     {
@@ -357,7 +357,7 @@ export const DiagnosticsPage: React.FC = () => {
       'Illustrative monitoring thresholds updated',
       `Updated UI monitoring thresholds (Temp > ${next.tempWarnC.toFixed(
         1
-      )}°C, V: ${next.packVoltageLowV.toFixed(1)}–${next.packVoltageHighV.toFixed(
+      )}°C, V: ${next.packVoltageLowV.toFixed(1)}-${next.packVoltageHighV.toFixed(
         1
       )}V, I > ${next.currentHighA.toFixed(0)}A).`,
       'Dashboard UI rule thresholds only; BMS hardware limits untouched.',
@@ -516,7 +516,7 @@ export const DiagnosticsPage: React.FC = () => {
                   'WARNING',
                   'MODE SWITCH',
                   'Switched to HARDWARE mode',
-                  'Backend disconnected — missing measurements marked NOT EVALUATED.',
+                  'Backend disconnected - missing measurements marked NOT EVALUATED.',
                   'Zero fabricated faults or zero-substitutions.',
                   'SWITCHED DIAGNOSTICS TO HARDWARE MODE (BACKEND OFFLINE)'
                 );

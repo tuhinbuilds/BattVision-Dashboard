@@ -22,7 +22,7 @@ export const DEFAULT_DIAGNOSTIC_THRESHOLDS: DiagnosticThresholdsConfig = {
 
 /**
  * Stage 1: Pure diagnostic rule definitions (separated from evaluation & UI).
- * Thresholds are explicitly configurable illustrative demo rules — never certified BMS limits.
+ * Thresholds are explicitly configurable illustrative demo rules - never certified BMS limits.
  */
 export function buildDiagnosticRules(cfg: DiagnosticThresholdsConfig): DiagnosticRule[] {
   return [
@@ -49,12 +49,12 @@ export function buildDiagnosticRules(cfg: DiagnosticThresholdsConfig): Diagnosti
     {
       ruleId: 'CELL-001',
       ruleName: '8S Series-Group Voltage Variation',
-      measurementSource: 'JK Smart BMS S1–S8 Taps',
+      measurementSource: 'JK Smart BMS S1-S8 Taps',
       comparisonCondition: `ΔV_group > ${cfg.cellDeltaWarnMv} mV`,
       configuredThresholdLabel: `> ${cfg.cellDeltaWarnMv} mV (Illustrative)`,
       severity: 'WARNING',
       explanation: 'Monitors divergence between 8S parallel-group voltages when valid BMS frames exist.',
-      requiredInputs: 'Live JK Smart BMS S1–S8 group voltages',
+      requiredInputs: 'Live JK Smart BMS S1-S8 group voltages',
     },
     {
       ruleId: 'TEMP-001',
@@ -165,7 +165,7 @@ export function evaluateDiagnosticRules(ctx: DiagnosticEngineContext): Diagnosti
             rule,
             outcome: 'NOT_EVALUATED',
             observedValueLabel: 'UNAVAILABLE',
-            statusMessage: 'VOLTAGE CHECK: NOT EVALUATED — HARDWARE STREAM UNAVAILABLE',
+            statusMessage: 'VOLTAGE CHECK: NOT EVALUATED - HARDWARE STREAM UNAVAILABLE',
             dataSource: 'UNAVAILABLE',
           };
         }
@@ -187,7 +187,7 @@ export function evaluateDiagnosticRules(ctx: DiagnosticEngineContext): Diagnosti
             rule,
             outcome: 'NOT_EVALUATED',
             observedValueLabel: 'UNAVAILABLE',
-            statusMessage: 'VOLTAGE CHECK: NOT EVALUATED — HARDWARE STREAM UNAVAILABLE',
+            statusMessage: 'VOLTAGE CHECK: NOT EVALUATED - HARDWARE STREAM UNAVAILABLE',
             dataSource: 'UNAVAILABLE',
           };
         }
@@ -209,7 +209,7 @@ export function evaluateDiagnosticRules(ctx: DiagnosticEngineContext): Diagnosti
             rule,
             outcome: 'NOT_EVALUATED',
             observedValueLabel: 'UNAVAILABLE',
-            statusMessage: 'GROUP SPREAD CHECK: NOT EVALUATED — BMS DATA UNAVAILABLE',
+            statusMessage: 'GROUP SPREAD CHECK: NOT EVALUATED - BMS DATA UNAVAILABLE',
             dataSource: 'UNAVAILABLE',
           };
         }
@@ -231,7 +231,7 @@ export function evaluateDiagnosticRules(ctx: DiagnosticEngineContext): Diagnosti
             rule,
             outcome: 'NOT_EVALUATED',
             observedValueLabel: 'UNAVAILABLE',
-            statusMessage: 'THERMAL CHECK: NOT EVALUATED — DS18B20 DATA UNAVAILABLE',
+            statusMessage: 'THERMAL CHECK: NOT EVALUATED - DS18B20 DATA UNAVAILABLE',
             dataSource: 'UNAVAILABLE',
           };
         }
@@ -253,7 +253,7 @@ export function evaluateDiagnosticRules(ctx: DiagnosticEngineContext): Diagnosti
             rule,
             outcome: 'NOT_EVALUATED',
             observedValueLabel: 'UNAVAILABLE',
-            statusMessage: 'SPREAD CHECK: NOT EVALUATED — INSUFFICIENT PROBE DATA',
+            statusMessage: 'SPREAD CHECK: NOT EVALUATED - INSUFFICIENT PROBE DATA',
             dataSource: 'UNAVAILABLE',
           };
         }
@@ -275,7 +275,7 @@ export function evaluateDiagnosticRules(ctx: DiagnosticEngineContext): Diagnosti
             rule,
             outcome: 'NOT_EVALUATED',
             observedValueLabel: 'UNAVAILABLE',
-            statusMessage: 'CURRENT CHECK: NOT EVALUATED — ACS758-50B DATA UNAVAILABLE',
+            statusMessage: 'CURRENT CHECK: NOT EVALUATED - ACS758-50B DATA UNAVAILABLE',
             dataSource: 'UNAVAILABLE',
           };
         }
@@ -298,7 +298,7 @@ export function evaluateDiagnosticRules(ctx: DiagnosticEngineContext): Diagnosti
             rule,
             outcome: 'NOT_EVALUATED',
             observedValueLabel: 'UNAVAILABLE',
-            statusMessage: 'POWER CHECK: NOT EVALUATED — VOLTAGE/CURRENT MISSING',
+            statusMessage: 'POWER CHECK: NOT EVALUATED - VOLTAGE/CURRENT MISSING',
             dataSource: 'UNAVAILABLE',
           };
         }
@@ -597,7 +597,7 @@ export function buildBaselineAlerts(ctx: DiagnosticEngineContext): DiagnosticAle
         configuredThresholdLabel: 'Verified BMS protocol frame',
         supportingMeasurement: 'JK Smart BMS communication path: NOT CONFIGURED',
         description:
-          'Series-group S1–S8 voltages and BMS protection flags are unavailable.',
+          'Series-group S1-S8 voltages and BMS protection flags are unavailable.',
         diagnosticExplanation:
           'The JK Smart BMS interface has not yet been physically verified or connected. Independent BMS hardware protection remains separate from this monitoring dashboard.',
         recommendedInspection:
@@ -660,7 +660,7 @@ export function buildBaselineAlerts(ctx: DiagnosticEngineContext): DiagnosticAle
       diagnosticExplanation:
         'Triggered by RULE TEMP-001 using live simulated telemetry from the central BattVision simulation engine. Does not indicate a physical cell fault.',
       recommendedInspection:
-        'Inspect the corresponding DS18B20 temperature probe, wiring, thermal contact, and ventilation around inner core banks S5–S6.',
+        'Inspect the corresponding DS18B20 temperature probe, wiring, thermal contact, and ventilation around inner core banks S5-S6.',
       dataSource: 'DEMO',
       simulated: true,
       status: 'ACTIVE',
@@ -786,12 +786,12 @@ export function buildBaselineAlerts(ctx: DiagnosticEngineContext): DiagnosticAle
       measurementName: 'Series-Group Spread (ΔV)',
       observedValueLabel: `${telemetry.cellDeltaMv} mV (SIMULATED)`,
       configuredThresholdLabel: `> ${thresholds.cellDeltaWarnMv} mV (Illustrative)`,
-      supportingMeasurement: `Simulated 8S spread ΔV = ${telemetry.cellDeltaMv} mV across S1–S8`,
+      supportingMeasurement: `Simulated 8S spread ΔV = ${telemetry.cellDeltaMv} mV across S1-S8`,
       description: 'Simulated cell-group imbalance scenario triggered RULE CELL-001.',
       diagnosticExplanation:
         'Demonstrates how elevated series-group voltage divergence is flagged for balancing inspection once live JK Smart BMS telemetry is connected.',
       recommendedInspection:
-        'Inspect S1–S8 group voltages in Battery Pack Explorer and verify nickel-strip/busbar weld resistance and BMS balancing.',
+        'Inspect S1-S8 group voltages in Battery Pack Explorer and verify nickel-strip/busbar weld resistance and BMS balancing.',
       dataSource: 'DEMO',
       simulated: true,
       status: 'ACTIVE',
@@ -830,7 +830,7 @@ export function buildBaselineAlerts(ctx: DiagnosticEngineContext): DiagnosticAle
     timestamp: nowIso,
     epochMs: nowEpoch,
     timeLabel,
-    title: 'BMS DATA UNAVAILABLE — INTERFACE PENDING VERIFICATION',
+    title: 'BMS DATA UNAVAILABLE - INTERFACE PENDING VERIFICATION',
     severity: 'WARNING',
     sourceComponent: 'JK SMART BMS (B1A8S10P)',
     measurementName: 'BMS Communication Link',
@@ -855,7 +855,7 @@ export function buildBaselineAlerts(ctx: DiagnosticEngineContext): DiagnosticAle
     timestamp: nowIso,
     epochMs: nowEpoch,
     timeLabel,
-    title: 'SIMULATED BENCH ENVIRONMENT — PHYSICAL SENSORS NOT WIRED',
+    title: 'SIMULATED BENCH ENVIRONMENT - PHYSICAL SENSORS NOT WIRED',
     severity: 'INFO',
     sourceComponent: 'ESP32-S3 / SENSOR NETWORK',
     measurementName: 'Hardware Data Source State',

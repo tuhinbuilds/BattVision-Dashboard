@@ -221,7 +221,7 @@ export const IntelligencePanel: React.FC<IntelligencePanelProps> = ({
                           color: 'var(--signal-amber)',
                         }}
                       >
-                        — — {card.placeholderText}
+                        -- {card.placeholderText}
                       </div>
                       <div
                         className="mono"

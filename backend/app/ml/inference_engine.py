@@ -51,7 +51,7 @@ class EdgeMLInferenceEngine:
         }
 
     def run_inference(self, _features: Dict[str, Optional[float]]) -> InferenceOutput:
-        # Honest no-model behavior — never invent SoH or RUL numbers
+        # Honest no-model behavior - never invent SoH or RUL numbers
         return InferenceOutput(
             deployed=False,
             status="MODEL_NOT_DEPLOYED",

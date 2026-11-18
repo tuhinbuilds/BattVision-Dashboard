@@ -89,8 +89,8 @@ export const EdgeAIPage: React.FC = () => {
         severity: target === 'HARDWARE' ? 'WARNING' : 'INFO',
         message:
           target === 'HARDWARE'
-            ? 'SWITCHED TO HARDWARE MODE — NO PHYSICAL ESP32-S3 OR LINUX SBC BACKEND DETECTED'
-            : 'SWITCHED TO DEMO MODE — ILLUSTRATIVE ARCHITECTURE & TELEMETRY PIPELINE ACTIVE',
+            ? 'SWITCHED TO HARDWARE MODE - NO PHYSICAL ESP32-S3 OR LINUX SBC BACKEND DETECTED'
+            : 'SWITCHED TO DEMO MODE - ILLUSTRATIVE ARCHITECTURE & TELEMETRY PIPELINE ACTIVE',
         simulated: target === 'DEMO',
       },
     ]);
@@ -279,7 +279,7 @@ export const EdgeAIPage: React.FC = () => {
       {/* SECTION 7: 9-STAGE TELEMETRY PROCESSING PIPELINE */}
       <TelemetryPipelineMonitor stages={pipelineStages} dataSourceMode={dataSourceMode} />
 
-      {/* SECTION 5: EMBEDDED CONTROLLER PANEL — PCBCUPID GLYPH ESP32-S3 */}
+      {/* SECTION 5: EMBEDDED CONTROLLER PANEL - PCBCUPID GLYPH ESP32-S3 */}
       <EmbeddedControllerPanel
         controller={controllerStatus}
         sensorInterfaces={sensorInterfaces}

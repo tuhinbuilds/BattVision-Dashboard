@@ -46,7 +46,7 @@ export const RulTrajectoryPanel: React.FC<RulTrajectoryPanelProps> = ({
           </h2>
           <span className={`bv-badge ${isDemo ? 'bv-badge--amber' : 'bv-badge--muted'}`}>
             {isDemo
-              ? 'ILLUSTRATIVE TRAJECTORY — NOT VALIDATED'
+              ? 'ILLUSTRATIVE TRAJECTORY - NOT VALIDATED'
               : 'NO PREDICTION (MODEL OFFLINE)'}
           </span>
         </div>
@@ -130,7 +130,7 @@ export const RulTrajectoryPanel: React.FC<RulTrajectoryPanelProps> = ({
                     labelFormatter={(lbl) => `Cycle ${lbl} (Demo)`}
                     formatter={(val: unknown, name: string) => {
                       if (Array.isArray(val)) {
-                        return [`${val[0]} – ${val[1]} Ah`, name];
+                        return [`${val[0]} - ${val[1]} Ah`, name];
                       }
                       return [`${val} Ah`, name];
                     }}

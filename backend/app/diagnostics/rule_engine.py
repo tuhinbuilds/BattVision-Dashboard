@@ -56,8 +56,8 @@ class BackendDiagnosticRuleEngine:
                     severity="INFO",
                     source_component="INA226",
                     observed_value="UNAVAILABLE",
-                    configured_threshold=f"{t.pack_voltage_low_v}V – {t.pack_voltage_high_v}V (Project Config)",
-                    explanation="VOLTAGE CHECK: NOT EVALUATED — TELEMETRY UNAVAILABLE",
+                    configured_threshold=f"{t.pack_voltage_low_v}V - {t.pack_voltage_high_v}V (Project Config)",
+                    explanation="VOLTAGE CHECK: NOT EVALUATED - TELEMETRY UNAVAILABLE",
                     data_source="UNAVAILABLE",
                 ),
             ]
@@ -75,7 +75,7 @@ class BackendDiagnosticRuleEngine:
                     severity="INFO",
                     source_component="INA226",
                     observed_value="MISSING (null)",
-                    configured_threshold=f"{t.pack_voltage_low_v}V – {t.pack_voltage_high_v}V (Project Config)",
+                    configured_threshold=f"{t.pack_voltage_low_v}V - {t.pack_voltage_high_v}V (Project Config)",
                     explanation="Pack voltage missing in packet; check not evaluated.",
                     data_source=src,
                 )
@@ -117,7 +117,7 @@ class BackendDiagnosticRuleEngine:
                     severity="NORMAL",
                     source_component="INA226",
                     observed_value=f"{packet.pack_voltage:.2f} V",
-                    configured_threshold=f"{t.pack_voltage_low_v}V – {t.pack_voltage_high_v}V (Project Config)",
+                    configured_threshold=f"{t.pack_voltage_low_v}V - {t.pack_voltage_high_v}V (Project Config)",
                     explanation="Pack voltage within configured project monitoring range.",
                     data_source=src,
                 )

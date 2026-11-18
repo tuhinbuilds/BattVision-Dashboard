@@ -21,11 +21,11 @@ constexpr const char* kSchemaVersion = "1.0";
 constexpr int kPinTbd = -1;
 constexpr uint8_t kI2cAddrTbd = 0x00;
 
-// I2C Bus (INA226, ADS1115, MPU6050) — verify exact PCBCupid Glyph ESP32-S3 pinout
+// I2C Bus (INA226, ADS1115, MPU6050) - verify exact PCBCupid Glyph ESP32-S3 pinout
 constexpr int kI2cSdaPin = kPinTbd;
 constexpr int kI2cSclPin = kPinTbd;
 
-// Unverified I2C addresses — confirm with I2C scanner on physical bench
+// Unverified I2C addresses - confirm with I2C scanner on physical bench
 constexpr uint8_t kIna226Address = kI2cAddrTbd;
 constexpr uint8_t kAds1115Address = kI2cAddrTbd;
 constexpr uint8_t kMpu6050Address = kI2cAddrTbd;
@@ -42,7 +42,7 @@ constexpr float kAcs758SensitivityVPerA = 0.0f; // TBD: depends on 3.3V/5V suppl
 // INA226 Shunt Configuration (verify shunt resistance & max bus rating before connecting to pack)
 constexpr float kIna226ShuntOhms = 0.0f;        // TBD
 
-// JK Smart BMS (B1A8S10P) — protocol, pinout, and galvanic isolation pending verification
+// JK Smart BMS (B1A8S10P) - protocol, pinout, and galvanic isolation pending verification
 constexpr bool kBmsEnabled = false;
 
 // Sampling interval (configurable; adjust after bench timing validation)

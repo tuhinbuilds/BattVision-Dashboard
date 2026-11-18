@@ -122,7 +122,7 @@ export const ExportReportsPanel: React.FC<ExportReportsPanelProps> = ({
                   >
                     {sessions.map((s) => (
                       <option key={s.id} value={s.id}>
-                        {s.id} — {s.title}
+                        {s.id} - {s.title}
                       </option>
                     ))}
                   </select>
@@ -233,7 +233,7 @@ export const ExportReportsPanel: React.FC<ExportReportsPanelProps> = ({
           </span>
         </div>
         <div className="bv-panel-body mono" style={{ fontSize: '11px', lineHeight: 1.65, color: 'var(--warm-neutral)' }}>
-          <div>BATTVISION ENERGY SYSTEMS LAB — EXPERIMENTAL DATA SUMMARY</div>
+          <div>BATTVISION ENERGY SYSTEMS LAB - EXPERIMENTAL DATA SUMMARY</div>
           <div style={{ color: 'var(--text-secondary)' }}>
             PACK: {BATTERY_PACK_SPEC.packId} ({BATTERY_PACK_SPEC.configuration}{' '}
             {BATTERY_PACK_SPEC.chemistry}, {BATTERY_PACK_SPEC.cellCount} × 32700,{' '}

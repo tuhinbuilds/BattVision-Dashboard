@@ -213,7 +213,7 @@ export const ThermalMonitoringSection: React.FC<ThermalMonitoringSectionProps> =
                     </span>
                   </div>
 
-                  {/* Horizontal Instrument Temperature Scale (10°C – 60°C) */}
+                  {/* Horizontal Instrument Temperature Scale (10°C - 60°C) */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
                     <div
                       style={{

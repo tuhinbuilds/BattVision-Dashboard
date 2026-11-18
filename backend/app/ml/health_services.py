@@ -52,7 +52,7 @@ class RemainingUsefulLifeService:
                 "remaining_cycles": None,
                 "eol_threshold_pct": eol_threshold_pct,
                 "validated_ageing_records": validated_ageing_records,
-                "note": "INSUFFICIENT AGEING DATA FOR VALIDATED RUL — requires experimental ageing labels and deployed model.",
+                "note": "INSUFFICIENT AGEING DATA FOR VALIDATED RUL - requires experimental ageing labels and deployed model.",
             }
         return {
             "available": False,

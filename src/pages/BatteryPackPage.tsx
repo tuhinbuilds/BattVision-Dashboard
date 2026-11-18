@@ -379,7 +379,7 @@ export const BatteryPackPage: React.FC = () => {
                       <td className="mono" style={{ color: 'var(--text-secondary)' }}>
                         {grp.measurement.available && grp.measurement.deltaFromMeanMv !== null
                           ? `${grp.measurement.deltaFromMeanMv >= 0 ? '+' : ''}${grp.measurement.deltaFromMeanMv} mV`
-                          : '—'}
+                          : ' - '}
                       </td>
                       <td className="mono" style={{ fontSize: '10.5px', color: 'var(--text-muted)' }}>
                         NOT INDIVIDUALLY MEASURED

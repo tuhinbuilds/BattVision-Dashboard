@@ -1,0 +1,14 @@
+node_modules
+dist
+.git
+.venv
+backend/.venv
+.pytest_cache
+*.pyc
+__pycache__
+*.tsbuildinfo
+.DS_Store
+.env
+data/telemetry/*.db
+data/telemetry/*.db-shm
+data/telemetry/*.db-wal

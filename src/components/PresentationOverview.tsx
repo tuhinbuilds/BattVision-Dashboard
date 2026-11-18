@@ -17,38 +17,38 @@ export const PresentationOverview: React.FC<PresentationOverviewProps> = ({ onNa
   const heroMetrics = [
     {
       label: 'PACK VOLTAGE',
-      value: isDemo ? telemetry.packVoltage.toFixed(2) : '— —',
+      value: isDemo ? telemetry.packVoltage.toFixed(2) : '--',
       unit: 'V',
       sub: `NOM ${BATTERY_PACK_SPEC.nominalVoltageV} V · FULL ${BATTERY_PACK_SPEC.fullChargeVoltageV} V`,
       color: 'var(--phosphor-green)',
     },
     {
       label: 'PACK CURRENT',
-      value: isDemo ? telemetry.packCurrent.toFixed(2) : '— —',
+      value: isDemo ? telemetry.packCurrent.toFixed(2) : '--',
       unit: 'A',
       sub: isDemo ? (telemetry.packCurrent < 0 ? 'CHARGING / INFLOW' : 'DISCHARGING') : 'OFFLINE',
       color: telemetry.packCurrent < 0 ? 'var(--signal-amber)' : 'var(--phosphor-green)',
     },
     {
       label: 'ELECTRICAL POWER',
-      value: isDemo ? telemetry.power.toFixed(1) : '— —',
+      value: isDemo ? telemetry.power.toFixed(1) : '--',
       unit: 'W',
       sub: 'V × I INSTANTANEOUS',
       color: 'var(--warm-neutral)',
     },
     {
       label: 'STATE OF CHARGE (EST)',
-      value: isDemo ? telemetry.stateOfCharge.toFixed(1) : '— —',
+      value: isDemo ? telemetry.stateOfCharge.toFixed(1) : '--',
       unit: '%',
       sub: isDemo ? `${((telemetry.stateOfCharge / 100) * 24).toFixed(1)} Ah EST · DEMO` : 'UNAVAILABLE',
       color: 'var(--phosphor-green)',
     },
     {
       label: 'PACK TEMPERATURE',
-      value: isDemo ? telemetry.temperature.toFixed(1) : '— —',
+      value: isDemo ? telemetry.temperature.toFixed(1) : '--',
       unit: '°C',
       sub: isDemo
-        ? `RANGE ${telemetry.minTemperature.toFixed(1)}–${telemetry.maxTemperature.toFixed(1)} °C`
+        ? `RANGE ${telemetry.minTemperature.toFixed(1)}-${telemetry.maxTemperature.toFixed(1)} °C`
         : '4× DS18B20 OFFLINE',
       color: telemetry.maxTemperature > 38 ? 'var(--signal-amber)' : 'var(--phosphor-green)',
     },

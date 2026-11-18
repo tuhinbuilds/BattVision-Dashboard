@@ -161,7 +161,7 @@ export const CapacityTestingLabPanel: React.FC<CapacityTestingLabPanelProps> = (
         </div>
 
         <div className="mono" style={{ fontSize: '9.5px', color: 'var(--text-muted)' }}>
-          NOTE: Nominal pack capacity (24.0 Ah) is used as a configured reference only when explicitly selected above — it is never assumed to equal measured initial usable capacity.
+          NOTE: Nominal pack capacity (24.0 Ah) is used as a configured reference only when explicitly selected above - it is never assumed to equal measured initial usable capacity.
         </div>
 
         {/* Log Capacity Test Form */}

@@ -164,7 +164,7 @@ export const EnergyFlowPanel: React.FC<EnergyFlowPanelProps> = ({
               fontFamily="IBM Plex Mono, monospace"
               fontSize="9.5"
             >
-              {voltage !== null ? `${voltage.toFixed(2)} V` : '— V'}
+              {voltage !== null ? `${voltage.toFixed(2)} V` : ' - V'}
             </text>
             <text
               x="252"
@@ -186,7 +186,7 @@ export const EnergyFlowPanel: React.FC<EnergyFlowPanelProps> = ({
               fontSize="9.5"
               fontWeight="600"
             >
-              {current !== null ? `${current.toFixed(2)} A` : '— A'}
+              {current !== null ? `${current.toFixed(2)} A` : ' - A'}
             </text>
             <text
               x="508"
@@ -196,7 +196,7 @@ export const EnergyFlowPanel: React.FC<EnergyFlowPanelProps> = ({
               fontFamily="IBM Plex Mono, monospace"
               fontSize="8.5"
             >
-              {power !== null ? `${power.toFixed(1)} W` : '— W'}
+              {power !== null ? `${power.toFixed(1)} W` : ' - W'}
             </text>
 
             {/* Node 1: BATTERY PACK */}

@@ -169,7 +169,7 @@ export const EdgeComputeAndResourcesPanel: React.FC<EdgeComputeAndResourcesPanel
             <div style={{ backgroundColor: '#131614', border: '1px solid var(--border-color)' }}>
               <div style={{ padding: '7px 10px', borderBottom: '1px solid var(--border-subtle)', backgroundColor: 'rgba(32, 36, 32, 0.72)' }}>
                 <span className="mono" style={{ fontSize: '10px', fontWeight: 600, color: 'var(--warm-neutral)' }}>
-                  CPU &amp; MEMORY UTILISATION HISTORY (%) — ILLUSTRATIVE DEMO
+                  CPU &amp; MEMORY UTILISATION HISTORY (%) - ILLUSTRATIVE DEMO
                 </span>
               </div>
               <div className="scope-grid-bg" style={{ height: '168px', padding: '8px 8px 4px 0' }}>
@@ -190,7 +190,7 @@ export const EdgeComputeAndResourcesPanel: React.FC<EdgeComputeAndResourcesPanel
             <div style={{ backgroundColor: '#131614', border: '1px solid var(--border-color)' }}>
               <div style={{ padding: '7px 10px', borderBottom: '1px solid var(--border-subtle)', backgroundColor: 'rgba(32, 36, 32, 0.72)' }}>
                 <span className="mono" style={{ fontSize: '10px', fontWeight: 600, color: 'var(--warm-neutral)' }}>
-                  EDGE PROCESSOR TEMPERATURE (°C) — ILLUSTRATIVE DEMO
+                  EDGE PROCESSOR TEMPERATURE (°C) - ILLUSTRATIVE DEMO
                 </span>
               </div>
               <div className="scope-grid-bg" style={{ height: '168px', padding: '8px 8px 4px 0' }}>

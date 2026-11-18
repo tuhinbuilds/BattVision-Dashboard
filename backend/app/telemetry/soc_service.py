@@ -149,7 +149,7 @@ class CoulombCountingSoCService:
                 + (
                     "Full-charge calibration applied."
                     if self._calibrated
-                    else "Uncalibrated estimate — not a validated lab measurement."
+                    else "Uncalibrated estimate - not a validated lab measurement."
                 )
             ),
         )

@@ -7,7 +7,7 @@ import {
 import { formatTimeShort } from './simulationService';
 
 export const CANONICAL_CSV_FIELDS: { field: CanonicalCsvField; label: string }[] = [
-  { field: '__unmapped__', label: '— Ignore / Unmapped —' },
+  { field: '__unmapped__', label: ' - Ignore / Unmapped - ' },
   { field: 'timestamp', label: 'timestamp (ISO / Epoch / HH:MM:SS)' },
   { field: 'pack_voltage', label: 'pack_voltage (V)' },
   { field: 'pack_current', label: 'pack_current (A)' },
@@ -196,7 +196,7 @@ export function parseAndValidateCsv(
   let duplicateTimestamps = 0;
 
   if (!tsHeader) {
-    warnings.push('No timestamp column automatically detected — assign one via column mapping.');
+    warnings.push('No timestamp column automatically detected - assign one via column mapping.');
   } else {
     const seen = new Set<number>();
     for (const row of rawRows) {

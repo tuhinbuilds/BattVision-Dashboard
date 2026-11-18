@@ -199,7 +199,7 @@ export const PackExplorerVisual: React.FC<PackExplorerVisualProps> = ({
                   </strong>
                 </span>
                 <span style={{ color: 'var(--signal-amber)', fontSize: '9.5px' }}>
-                  [INDIVIDUAL CELL V NOT METERED — PARALLEL NODE]
+                  [INDIVIDUAL CELL V NOT METERED - PARALLEL NODE]
                 </span>
               </div>
             ) : (
@@ -414,7 +414,7 @@ export const PackExplorerVisual: React.FC<PackExplorerVisualProps> = ({
                           >
                             {group.measurement.available && group.measurement.voltageV !== null
                               ? `${group.measurement.voltageV.toFixed(3)}V`
-                              : '— — V'}
+                              : '-- V'}
                           </span>
                           <span
                             className="mono"

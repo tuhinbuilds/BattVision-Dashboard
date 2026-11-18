@@ -297,7 +297,7 @@ export const SystemArchitectureDiagram: React.FC<SystemArchitectureDiagramProps>
             }}
           >
             <span>
-              SAFETY BOUNDARY: ESP32-S3 &amp; Linux SBC provide offline diagnostics/prognostics only — JK Smart BMS remains the independent hardware safety layer.
+              SAFETY BOUNDARY: ESP32-S3 &amp; Linux SBC provide offline diagnostics/prognostics only - JK Smart BMS remains the independent hardware safety layer.
             </span>
             <span style={{ color: 'var(--phosphor-green)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
               ZERO CLOUD DEPENDENCY <ArrowRight size={10} /> LOCAL EXECUTION

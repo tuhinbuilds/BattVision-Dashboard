@@ -68,18 +68,18 @@ export const THERMAL_DISPLAY_BANDS = {
   normalMaxC: 36.0,
   warmMaxC: 45.0,
   disclaimer:
-    'Illustrative UI display bands only — physical DS18B20 placement and validated thermal limits pending lab calibration.',
+    'Illustrative UI display bands only - physical DS18B20 placement and validated thermal limits pending lab calibration.',
 } as const;
 
 export const HARDWARE_STACK = {
   controller: 'PCBCupid Glyph ESP32-S3',
-  bms: 'JK Smart BMS (B1A8S10P — verification pending)',
+  bms: 'JK Smart BMS (B1A8S10P - verification pending)',
   edgeComputer: 'Linux Single-Board Computer (Selection Pending)',
   sensors: [
     { id: 'INA226', role: 'Pack Bus Voltage & Power Monitor', bus: 'I2C (0x40)' },
     { id: 'ACS758-50B', role: 'Bidirectional Hall-Effect Current (±50 A)', bus: 'Analog → ADS1115' },
     { id: 'ADS1115', role: '16-Bit Precision ADC Interface', bus: 'I2C (0x48)' },
-    { id: '4× DS18B20', role: 'Pack Core & Busbar Thermal Probes (T1–T4)', bus: '1-Wire Bus' },
+    { id: '4× DS18B20', role: 'Pack Core & Busbar Thermal Probes (T1-T4)', bus: '1-Wire Bus' },
     { id: 'MPU6050', role: '3-Axis Accelerometer / Vibration IMU', bus: 'I2C (0x68)' },
   ],
   softwareStack: [
@@ -105,7 +105,7 @@ export const SIMULATION_PROFILES: Record<
   NOMINAL_DRIVE: {
     label: 'Nominal Drive Cycle',
     shortLabel: 'NOMINAL',
-    description: 'Steady EV cruise load (~11–14 A discharge, ~320 W nominal draw)',
+    description: 'Steady EV cruise load (~11-14 A discharge, ~320 W nominal draw)',
     targetCurrentA: 12.4,
     currentRippleA: 1.8,
     vibrationBaseG: 0.14,
@@ -123,7 +123,7 @@ export const SIMULATION_PROFILES: Record<
   HIGH_LOAD: {
     label: 'High Acceleration Load',
     shortLabel: 'HIGH LOAD',
-    description: 'Elevated transient discharge (~28–33 A, ~760 W) with voltage sag',
+    description: 'Elevated transient discharge (~28-33 A, ~760 W) with voltage sag',
     targetCurrentA: 29.8,
     currentRippleA: 3.4,
     vibrationBaseG: 0.34,

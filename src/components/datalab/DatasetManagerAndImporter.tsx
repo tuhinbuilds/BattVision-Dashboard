@@ -127,7 +127,7 @@ export const DatasetManagerAndImporter: React.FC<DatasetManagerAndImporterProps>
       category: 'Imported CSV records',
       source: `Local CSV Import (${importDraft.filename})`,
       chemistry: 'LiFePO4 (User Imported)',
-      cellFormat: '32700 (8S4P Assumed — Verify)',
+      cellFormat: '32700 (8S4P Assumed - Verify)',
       recordCount: records.length,
       features: mappedTargets.map((field) => ({
         name: field,
@@ -138,7 +138,7 @@ export const DatasetManagerAndImporter: React.FC<DatasetManagerAndImporterProps>
       })),
       targetLabels,
       samplingInterval: 'Derived from CSV timestamps',
-      format: 'CSV (Mapped — Raw Preserved)',
+      format: 'CSV (Mapped - Raw Preserved)',
       validationStatus: 'IMPORTED_UNVALIDATED',
       notes: `Imported ${records.length} rows (${importDraft.missingCount} missing cells, ${importDraft.duplicateTimestamps} duplicate timestamps). Original uploaded data preserved separately from mapped records.`,
       simulated: false,

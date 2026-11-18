@@ -134,7 +134,7 @@ export const LiveOscilloscopeSection: React.FC<LiveOscilloscopeSectionProps> = R
                 className="mono"
                 style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.12em', color: 'var(--signal-amber)' }}
               >
-                NO HARDWARE SIGNAL — OSCILLOSCOPE STANDBY
+                NO HARDWARE SIGNAL - OSCILLOSCOPE STANDBY
               </span>
               <span style={{ fontSize: '12px', color: 'var(--text-secondary)', maxWidth: '480px' }}>
                 HARDWARE MODE is active and no ESP32-S3 or local Edge API telemetry frames are

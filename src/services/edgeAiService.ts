@@ -24,7 +24,7 @@ export function buildArchitectureBlocks(mode: DataSourceMode): ArchitectureBlock
   const src = isDemo ? 'DEMO' : 'UNAVAILABLE';
 
   return [
-    // Layer 1 — Battery & Sensing
+    // Layer 1 - Battery & Sensing
     {
       id: 'blk-pack',
       layer: 'sensing',
@@ -78,7 +78,7 @@ export function buildArchitectureBlocks(mode: DataSourceMode): ArchitectureBlock
       integrationState: 'Probe physical mounting positions and I2C bus wiring pending final assembly.',
     },
 
-    // Layer 2 — Embedded Acquisition
+    // Layer 2 - Embedded Acquisition
     {
       id: 'blk-esp32',
       layer: 'embedded',
@@ -106,7 +106,7 @@ export function buildArchitectureBlocks(mode: DataSourceMode): ArchitectureBlock
       integrationState: 'Conceptual firmware architecture defined; firmware deployment pending.',
     },
 
-    // Layer 3 — Edge Computing
+    // Layer 3 - Edge Computing
     {
       id: 'blk-sbc',
       layer: 'edge',
@@ -173,7 +173,7 @@ export function buildArchitectureBlocks(mode: DataSourceMode): ArchitectureBlock
       integrationState: 'Frontend dataService contract ready for direct swap from DEMO to local API.',
     },
 
-    // Layer 4 — Application
+    // Layer 4 - Application
     {
       id: 'blk-dashboard',
       layer: 'application',
@@ -442,7 +442,7 @@ export function buildTelemetryPipelineStages(
       lastProcessed: 'N/A',
       errorCount: null,
       latencyMs: null,
-      description: 'Model not deployed yet — offline SoH/RUL inference pending trained artifact.',
+      description: 'Model not deployed yet - offline SoH/RUL inference pending trained artifact.',
     },
     {
       id: 'pipe-9',
@@ -669,7 +669,7 @@ export function seedEdgeSystemLogs(): EdgeSystemLogEntry[] {
       timeLabel: formatTimeShort(now - 1200),
       category: 'DATABASE',
       severity: 'INFO',
-      message: 'SQLITE STORAGE NOT MOUNTED — USING BOUNDED IN-MEMORY SESSION BUFFER',
+      message: 'SQLITE STORAGE NOT MOUNTED - USING BOUNDED IN-MEMORY SESSION BUFFER',
       simulated: true,
     },
     {
@@ -678,7 +678,7 @@ export function seedEdgeSystemLogs(): EdgeSystemLogEntry[] {
       timeLabel: formatTimeShort(now - 700),
       category: 'COMMUNICATION',
       severity: 'WARNING',
-      message: 'JK SMART BMS B1A8S10P PROTOCOL UNVERIFIED — LINK NOT CONFIGURED',
+      message: 'JK SMART BMS B1A8S10P PROTOCOL UNVERIFIED - LINK NOT CONFIGURED',
       simulated: true,
     },
     {
@@ -687,7 +687,7 @@ export function seedEdgeSystemLogs(): EdgeSystemLogEntry[] {
       timeLabel: formatTimeShort(now - 300),
       category: 'ML INFERENCE',
       severity: 'WARNING',
-      message: 'MODEL NOT DEPLOYED — OFFLINE INFERENCE ENGINE STANDING BY',
+      message: 'MODEL NOT DEPLOYED - OFFLINE INFERENCE ENGINE STANDING BY',
       simulated: true,
     },
   ];

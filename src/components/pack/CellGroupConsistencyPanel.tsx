@@ -64,7 +64,7 @@ export const CellGroupConsistencyPanel: React.FC<CellGroupConsistencyPanelProps>
                 lineHeight: 1.5,
               }}
             >
-              No live S1–S8 group voltage frames have been received from the JK Smart BMS
+              No live S1-S8 group voltage frames have been received from the JK Smart BMS
               (B1A8S10P). Group voltage spread and balance status are intentionally withheld in
               HARDWARE mode until valid BMS telemetry is connected.
             </p>
@@ -118,7 +118,7 @@ export const CellGroupConsistencyPanel: React.FC<CellGroupConsistencyPanelProps>
             { label: 'Spread (ΔV)', value: `${spreadMv} mV` },
             {
               label: 'Max / Min Group',
-              value: `${highestGroup?.id ?? '—'} / ${lowestGroup?.id ?? '—'}`,
+              value: `${highestGroup?.id ?? ' - '} / ${lowestGroup?.id ?? ' - '}`,
             },
             {
               label: 'Balance Status',

@@ -24,7 +24,7 @@ class Vector3Schema(BaseModel):
 class TelemetryPacketV1(BaseModel):
     """
     Version 1.0 telemetry packet contract between ESP32-S3 (or simulator) and Python backend.
-    Missing measurements MUST be null (None) — never 0.
+    Missing measurements MUST be null (None) - never 0.
     """
     schema_version: str = Field(default="1.0")
     device_id: str = Field(..., min_length=2, max_length=64)

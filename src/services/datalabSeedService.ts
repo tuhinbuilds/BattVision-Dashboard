@@ -33,7 +33,7 @@ export function buildDemoExperimentSessions(liveSampleCount: number): Experiment
     },
     {
       id: 'EXP-DEMO-002',
-      title: 'Thermal Gradient Bench Profile — 4× DS18B20 (Demo)',
+      title: 'Thermal Gradient Bench Profile - 4× DS18B20 (Demo)',
       packId: BATTERY_PACK_SPEC.packId,
       startTimestamp: new Date(now - 86400_000 * 2).toISOString(),
       endTimestamp: new Date(now - 86400_000 * 2 + 2700_000).toISOString(),
@@ -86,7 +86,7 @@ export function buildDemoCapacityTests(): LabCapacityTestRecord[] {
       measuredEnergyWh: 598.1,
       referenceCapacityAh: BATTERY_PACK_SPEC.nominalCapacityAh,
       procedureNotes:
-        'ILLUSTRATIVE DEMO TEST ONLY — demonstrates baseline usable-capacity capture vs. 24.0 Ah nominal spec.',
+        'ILLUSTRATIVE DEMO TEST ONLY - demonstrates baseline usable-capacity capture vs. 24.0 Ah nominal spec.',
       dataSource: 'DEMO',
       validationStatus: 'ILLUSTRATIVE_DEMO',
       dataQualityLabel: 'Demo Complete (0% missing)',
@@ -106,7 +106,7 @@ export function buildDemoCapacityTests(): LabCapacityTestRecord[] {
       measuredEnergyWh: 574.3,
       referenceCapacityAh: BATTERY_PACK_SPEC.nominalCapacityAh,
       procedureNotes:
-        'ILLUSTRATIVE DEMO TEST ONLY — shows how measured usable capacity feeds capacity-based SoH calculation.',
+        'ILLUSTRATIVE DEMO TEST ONLY - shows how measured usable capacity feeds capacity-based SoH calculation.',
       dataSource: 'DEMO',
       validationStatus: 'ILLUSTRATIVE_DEMO',
       dataQualityLabel: 'Demo Complete (0% missing)',

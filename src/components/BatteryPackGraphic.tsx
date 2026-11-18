@@ -535,7 +535,7 @@ export const BatteryPackGraphic: React.FC<BatteryPackGraphicProps> = ({
             <span>
               THERMAL ARRAY (4× DS18B20):{' '}
               <strong style={{ color: 'var(--text-primary)' }}>
-                {telemetry.minTemperature.toFixed(1)}–{telemetry.maxTemperature.toFixed(1)} °C
+                {telemetry.minTemperature.toFixed(1)}-{telemetry.maxTemperature.toFixed(1)} °C
               </strong>
             </span>
             <span>

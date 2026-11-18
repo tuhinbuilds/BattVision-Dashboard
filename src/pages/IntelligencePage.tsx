@@ -135,11 +135,11 @@ export const IntelligencePage: React.FC = () => {
 
         {isDemo ? (
           <span className="bv-badge bv-badge--amber">
-            ILLUSTRATIVE DEMO OUTPUT — NOT A VALIDATED MODEL PREDICTION
+            ILLUSTRATIVE DEMO OUTPUT - NOT A VALIDATED MODEL PREDICTION
           </span>
         ) : (
           <span className="bv-badge bv-badge--muted">
-            HARDWARE MODE — NO MODEL OR BACKEND DATA CONNECTED
+            HARDWARE MODE - NO MODEL OR BACKEND DATA CONNECTED
           </span>
         )}
       </div>

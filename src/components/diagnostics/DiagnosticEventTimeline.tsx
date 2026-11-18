@@ -282,7 +282,7 @@ export const DiagnosticEventTimeline: React.FC<DiagnosticEventTimelineProps> = (
                     </div>
 
                     <div style={{ fontSize: '12px', color: 'var(--text-primary)', fontWeight: 500 }}>
-                      {evt.title} — <span style={{ color: 'var(--text-secondary)', fontWeight: 400 }}>{evt.description}</span>
+                      {evt.title} - <span style={{ color: 'var(--text-secondary)', fontWeight: 400 }}>{evt.description}</span>
                     </div>
 
                     {isExpanded && (

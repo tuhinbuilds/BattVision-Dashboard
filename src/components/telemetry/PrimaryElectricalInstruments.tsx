@@ -146,7 +146,7 @@ export const PrimaryElectricalInstruments: React.FC<PrimaryElectricalInstruments
           }
         `}</style>
 
-        {/* INSTRUMENT 01 — PACK VOLTAGE */}
+        {/* INSTRUMENT 01 - PACK VOLTAGE */}
         <article className="bv-panel" style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div className="bv-panel-header" style={{ padding: '8px 12px' }}>
             <div className="bv-panel-title-group">
@@ -275,7 +275,7 @@ export const PrimaryElectricalInstruments: React.FC<PrimaryElectricalInstruments
           </div>
         </article>
 
-        {/* INSTRUMENT 02 — PACK CURRENT */}
+        {/* INSTRUMENT 02 - PACK CURRENT */}
         <article className="bv-panel" style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div className="bv-panel-header" style={{ padding: '8px 12px' }}>
             <div className="bv-panel-title-group">
@@ -410,7 +410,7 @@ export const PrimaryElectricalInstruments: React.FC<PrimaryElectricalInstruments
           </div>
         </article>
 
-        {/* INSTRUMENT 03 — ELECTRICAL POWER (V × I) */}
+        {/* INSTRUMENT 03 - ELECTRICAL POWER (V × I) */}
         <article className="bv-panel" style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div className="bv-panel-header" style={{ padding: '8px 12px' }}>
             <div className="bv-panel-title-group">
@@ -517,7 +517,7 @@ export const PrimaryElectricalInstruments: React.FC<PrimaryElectricalInstruments
           </div>
         </article>
 
-        {/* INSTRUMENT 04 — STATE OF CHARGE (SEMICIRCULAR GAUGE) */}
+        {/* INSTRUMENT 04 - STATE OF CHARGE (SEMICIRCULAR GAUGE) */}
         <article className="bv-panel" style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div className="bv-panel-header" style={{ padding: '8px 12px' }}>
             <div className="bv-panel-title-group">

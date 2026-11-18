@@ -102,7 +102,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               type="button"
               className={`sidebar__nav-item ${isActive ? 'sidebar__nav-item--active' : ''}`}
               onClick={() => onSelectSection(item.id)}
-              title={collapsed ? `${item.label} — ${item.subtitle}` : item.subtitle}
+              title={collapsed ? `${item.label} - ${item.subtitle}` : item.subtitle}
               aria-current={isActive ? 'page' : undefined}
             >
               <Icon size={16} className="sidebar__nav-icon" />

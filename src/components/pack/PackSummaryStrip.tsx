@@ -23,7 +23,7 @@ export const PackSummaryStrip: React.FC<PackSummaryStripProps> = ({
   const items = [
     {
       label: 'Pack Voltage',
-      value: isDemo ? telemetry.packVoltage.toFixed(2) : '— —',
+      value: isDemo ? telemetry.packVoltage.toFixed(2) : '--',
       unit: 'V',
       source: isDemo ? 'SIMULATED' : 'UNAVAILABLE',
       freshness,
@@ -31,7 +31,7 @@ export const PackSummaryStrip: React.FC<PackSummaryStripProps> = ({
     },
     {
       label: 'Pack Current',
-      value: isDemo ? telemetry.packCurrent.toFixed(2) : '— —',
+      value: isDemo ? telemetry.packCurrent.toFixed(2) : '--',
       unit: 'A',
       source: isDemo ? 'SIMULATED' : 'UNAVAILABLE',
       freshness,
@@ -43,7 +43,7 @@ export const PackSummaryStrip: React.FC<PackSummaryStripProps> = ({
     },
     {
       label: 'Pack Power',
-      value: isDemo ? telemetry.power.toFixed(1) : '— —',
+      value: isDemo ? telemetry.power.toFixed(1) : '--',
       unit: 'W',
       source: isDemo ? 'SIMULATED' : 'UNAVAILABLE',
       freshness,
@@ -51,7 +51,7 @@ export const PackSummaryStrip: React.FC<PackSummaryStripProps> = ({
     },
     {
       label: 'State of Charge',
-      value: isDemo ? telemetry.stateOfCharge.toFixed(1) : '— —',
+      value: isDemo ? telemetry.stateOfCharge.toFixed(1) : '--',
       unit: '%',
       source: isDemo ? 'DEMO EST' : 'UNAVAILABLE',
       freshness,
@@ -63,7 +63,7 @@ export const PackSummaryStrip: React.FC<PackSummaryStripProps> = ({
     },
     {
       label: 'Pack Temperature',
-      value: isDemo ? telemetry.temperature.toFixed(1) : '— —',
+      value: isDemo ? telemetry.temperature.toFixed(1) : '--',
       unit: '°C',
       source: isDemo ? 'DS18B20 SIM' : 'UNAVAILABLE',
       freshness,
@@ -175,7 +175,7 @@ export const PackSummaryStrip: React.FC<PackSummaryStripProps> = ({
                 fontSize: '22px',
                 fontWeight: 600,
                 lineHeight: 1.05,
-                color: item.value === '— —' ? 'var(--text-muted)' : 'var(--text-primary)',
+                color: item.value === '--' ? 'var(--text-muted)' : 'var(--text-primary)',
               }}
             >
               {item.value}

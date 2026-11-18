@@ -76,7 +76,7 @@ export const ModelStatusAndMetrics: React.FC<ModelStatusAndMetricsProps> = ({
             }}
           >
             <div className="micro-label" style={{ marginBottom: '8px', fontSize: '9px' }}>
-              MODEL LIFECYCLE PIPELINE (CURRENT STAGE: 01 — DATA COLLECTION PREP)
+              MODEL LIFECYCLE PIPELINE (CURRENT STAGE: 01 - DATA COLLECTION PREP)
             </div>
             <div
               style={{
@@ -181,7 +181,7 @@ export const ModelStatusAndMetrics: React.FC<ModelStatusAndMetricsProps> = ({
               letterSpacing: '0.07em',
             }}
           >
-            VALIDATION METRICS NOT AVAILABLE — NO TRAINED MODEL DEPLOYED
+            VALIDATION METRICS NOT AVAILABLE - NO TRAINED MODEL DEPLOYED
           </div>
 
           {/* MAE / RMSE / R² Cards */}

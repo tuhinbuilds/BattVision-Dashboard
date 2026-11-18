@@ -67,7 +67,7 @@ export const DegradationChartsPanel: React.FC<DegradationChartsPanelProps> = ({
               className={`bv-btn ${zoom === opt && isDemo ? 'bv-btn--active' : ''}`}
               style={{ padding: '3px 8px', fontSize: '9.5px', opacity: isDemo ? 1 : 0.45 }}
             >
-              {opt === '200' ? '0–200 CYC' : '0–320 CYC'}
+              {opt === '200' ? '0-200 CYC' : '0-320 CYC'}
             </button>
           ))}
         </div>

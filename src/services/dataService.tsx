@@ -352,15 +352,15 @@ export const TelemetryProvider: React.FC<{ children: React.ReactNode }> = ({ chi
           backendHealth?.reachable ? 'HW-200' : 'HW-404',
           'HARDWARE',
           backendHealth?.reachable
-            ? 'Switched to HARDWARE mode — subscribing to local Python Edge Backend WebSocket (/ws/telemetry).'
-            : 'Switched to HARDWARE mode — backend/BMS not connected; unavailable measurements displayed honestly without simulation fallback.',
+            ? 'Switched to HARDWARE mode - subscribing to local Python Edge Backend WebSocket (/ws/telemetry).'
+            : 'Switched to HARDWARE mode - backend/BMS not connected; unavailable measurements displayed honestly without simulation fallback.',
           backendHealth?.reachable ? 'INFO' : 'WARNING'
         );
       } else {
         logEvent(
           'SIM-102',
           'TELEMETRY',
-          'Switched to DEMO mode — centralized 8S4P simulation stream active.',
+          'Switched to DEMO mode - centralized 8S4P simulation stream active.',
           'NOMINAL'
         );
       }

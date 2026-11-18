@@ -39,7 +39,7 @@ export const MlWorkflowPanel: React.FC = () => {
           }}
         >
           ARCHITECTURE PRINCIPLE: Inference and model retraining are strictly separate processes.
-          BattVision never performs continuous online retraining while the EV is operating — new
+          BattVision never performs continuous online retraining while the EV is operating - new
           candidate models are trained and validated offline on a workstation before manual approval
           and deployment to the Linux edge computer.
         </div>

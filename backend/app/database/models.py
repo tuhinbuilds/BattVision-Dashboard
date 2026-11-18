@@ -24,7 +24,7 @@ class TelemetryRecordORM(Base):
     received_at: Mapped[str] = mapped_column(String(64), nullable=False, default=utc_now_iso)
     source: Mapped[str] = mapped_column(String(32), nullable=False, index=True)
 
-    # Nullable measurements — NEVER coerce missing values to 0
+    # Nullable measurements - NEVER coerce missing values to 0
     pack_voltage: Mapped[float | None] = mapped_column(Float, nullable=True)
     pack_current: Mapped[float | None] = mapped_column(Float, nullable=True)
     power: Mapped[float | None] = mapped_column(Float, nullable=True)
